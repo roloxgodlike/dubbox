@@ -1,7 +1,8 @@
 2016.10.12 金一鼎
 基于dubbox尝试加入自定义LB, 实现特殊负载均衡
         
-使用时至少需要依赖以下包 *部分包已经打包上传至东骏仓库
+###使用时至少需要依赖以下包 *部分包已经打包上传至东骏仓库* ###
+```xml
 <dubbox.version>2.8.4a</dubbox.version>
 <dubbox.javassist.version>3.15.0-GA</dubbox.javassist.version>
 <dubbox.netty.version>3.9.9.Final</dubbox.netty.version>
