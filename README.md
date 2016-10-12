@@ -1,5 +1,40 @@
 2016.10.12 金一鼎
 基于dubbox尝试加入自定义LB, 实现特殊负载均衡
+        
+使用时至少需要依赖以下包 *部分包已经打包上传至东骏仓库
+<dubbox.version>2.8.4a</dubbox.version>
+<dubbox.javassist.version>3.15.0-GA</dubbox.javassist.version>
+<dubbox.netty.version>3.9.9.Final</dubbox.netty.version>
+<dubbox.zkclient.version>0.8.1</dubbox.zkclient.version>
+<dubbox.zookeeper.version>3.4.8</dubbox.zookeeper.version>
+
+<dependency>
+    <groupId>com.dongjun.dubbox</groupId>
+    <artifactId>dubbo</artifactId>
+    <version>${dubbox.version}</version>
+</dependency>
+<dependency>
+    <groupId>org.javassist</groupId>
+    <artifactId>javassist</artifactId>
+    <version>${dubbox.javassist.version}</version>
+</dependency>
+<dependency>
+    <groupId>io.netty</groupId>
+    <artifactId>netty</artifactId>
+    <version>${dubbox.netty.version}</version>
+</dependency>
+<dependency>
+    <groupId>com.dongjun.zookeeper</groupId>
+    <artifactId>zkclient</artifactId>
+    <version>0.8.1</version>
+</dependency>
+<dependency>
+    <groupId>org.apache.zookeeper</groupId>
+    <artifactId>zookeeper</artifactId>
+    <version>3.4.8</version>
+</dependency>
+
+
 
 Dubbox now means Dubbo eXtensions. If you know java, javax and dubbo, you know what dubbox is :)
 
