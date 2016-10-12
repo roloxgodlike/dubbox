@@ -1,0 +1,2 @@
+#测试插件
+djnetty=com.alibaba.dubbo.examples.annotation.DjNettyLoadBalance
