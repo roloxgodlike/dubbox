@@ -38,7 +38,7 @@ public class LoggerFactory {
     private LoggerFactory() {
     }
 
-    private static volatile LoggerAdapter LOGGER_ADAPTER;
+    private static volatile LoggerAdapter                      LOGGER_ADAPTER;
 
     private static final ConcurrentMap<String, FailsafeLogger> LOGGERS = new ConcurrentHashMap<String, FailsafeLogger>();
 
@@ -57,10 +57,10 @@ public class LoggerFactory {
             setLoggerAdapter(new JdkLoggerAdapter());
         } else {
             try {
-                setLoggerAdapter(new Log4j2LoggerAdapter());//默认日志类改成log4j2（杨俊明）
+                setLoggerAdapter(new Slf4jLoggerAdapter());
             } catch (Throwable e1) {
                 try {
-                    setLoggerAdapter(new Slf4jLoggerAdapter());
+                    setLoggerAdapter(new Log4j2LoggerAdapter());//默认日志类改成log4j2（杨俊明）
                 } catch (Throwable e2) {
                     try {
                         setLoggerAdapter(new JclLoggerAdapter());
@@ -74,7 +74,8 @@ public class LoggerFactory {
 
     public static void setLoggerAdapter(String loggerAdapter) {
         if (loggerAdapter != null && loggerAdapter.length() > 0) {
-            setLoggerAdapter(ExtensionLoader.getExtensionLoader(LoggerAdapter.class).getExtension(loggerAdapter));
+            setLoggerAdapter(ExtensionLoader.getExtensionLoader(LoggerAdapter.class).getExtension(
+                loggerAdapter));
         }
     }
 
