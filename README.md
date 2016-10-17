@@ -1,3 +1,4 @@
+##  变动说明
 * 2016.10.12   金一鼎   基于dubbox尝试加入自定义LB, 实现特殊负载均衡
 * 2016.10.17   金一鼎   修改dubbo-common中的日志工厂com.alibaba.dubbo.common.logger.LoggerFactory,  改为默认使用slf4j
       
@@ -43,7 +44,7 @@
     </exclusions>
 </dependency>
 ```
-## 
+## Dubbox core
 
 Dubbox now means Dubbo eXtensions. If you know java, javax and dubbo, you know what dubbox is :)
 
